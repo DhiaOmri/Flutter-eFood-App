@@ -1,4 +1,4 @@
-package com.u6amtech.flutter_restaurant
+package com.efood.webixia
 
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingPlugin

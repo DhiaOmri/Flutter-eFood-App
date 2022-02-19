@@ -55,15 +55,19 @@ class OnBoardingScreen extends StatelessWidget {
                                 : SizedBox(),
                             SizedBox(
                               height: 400,
+                              width: MediaQuery.of(context).size.width * 1,
                               child: PageView.builder(
                                 itemCount: onBoardingList.onBoardingList.length,
                                 controller: _pageController,
                                 physics: BouncingScrollPhysics(),
                                 itemBuilder: (context, index) {
                                   return Padding(
-                                    padding: EdgeInsets.all(30),
-                                    child: Image.asset(onBoardingList
-                                        .onBoardingList[index].imageUrl),
+                                    padding: EdgeInsets.all(0),
+                                    child: FittedBox(
+                                      child: Image.asset(onBoardingList
+                                          .onBoardingList[index].imageUrl),
+                                      fit: BoxFit.fill,
+                                    ),
                                   );
                                 },
                                 onPageChanged: (index) {
